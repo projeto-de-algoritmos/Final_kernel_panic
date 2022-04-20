@@ -1,45 +1,65 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# kernel_panik
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: StackTraceError<br>
+**Conteúdo da Disciplina**: Final<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0033620  |  João Henrique C. Paulino |
+| 18/0052845  |  Gabriela da Gama Pivetta |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+![panikito](img/panik.jpeg)
+
+Kernel panic, a versão Linux da tela azul da morte do Windows.
+Ambos são provenientes de erros do kernel de sistemas
+operacionais e são lançados quando o S.O. está sofrendo.
+O processo é tão traumático que os programadores buscam 
+ao máximo evitar esta situação, o que leva a implementação
+de técnicas extremamente sofisticadas.
+
+Uma versão humana do Kernel panic é o [burnout](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/sindrome-de-burnout#:~:text=S%C3%ADndrome%20de%20Burnout%20ou%20S%C3%ADndrome,justamente%20o%20excesso%20de%20trabalho.)
+,que força o desligamento e reinicialização em modo de "segurança" do seu corpo, e pode vir acompanhado
+de outros problemas psicológicos.
+
+Este problema típico da sociedade do desempenho, descrito por
+Byung-Chul Han em seu livro "Sociedade do cansaço", ainda não
+possui solução definitiva. Entretanto, o repositório atual
+busca ajudar você jovem estudante da FGA a selecionar 
+a ordem de resolução das atividades mais importantes.
+
+O princípio geral do repositório pode ser descrito da seguinte forma:
+
+- O sistema possui a grade curricular do seu curso.
+- O sistema sabe quantas matérias serão trancadas caso você reprove na matéria X.
+- Você insere as atividades que deverão ser feitas referentes as matérias.
+- O sistema calcula a ordem das matérias a serem feitas.
+- O sistema retorna a lista com a prioridade de atividades a serem feitas.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![loading](img/loading.jpeg)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python3<br>
+**Framework**: Flask<br>
+
+ - Instalacao dos pacotes necessarios
+```
+  $ sudo apt install virtualenv
+  $ virtualen env
+  $ source env/bin/activate
+  $ pip3 install -r requirements.txt
+
+```
+ - Execucao do projeto
+```
+  $ cd src
+  $ python3 app.py
+```
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Acessar a pagina inicial da aplicacao( localhost:5000 ) usando o seu navegado de preferencia, selecionar seu curso e inserir as atividades.
 
 ## Outros 
 Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
-
