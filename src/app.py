@@ -10,5 +10,13 @@ def index():
     titulo_id_materias = [(m.title,m.id_) for m in load_materias()]
     return render_template('home.html',titulo_id_materias=titulo_id_materias)
 
+@app.route("/insere_atividade", methods=['POST'])
+def insere_atividade():
+    pass
+
+@app.route("/remove_todas_atividades", methods=['POST'])
+def remove_todas_atividades():
+    pass
+
 if __name__ == "__main__":
     app.run(debug=False)
