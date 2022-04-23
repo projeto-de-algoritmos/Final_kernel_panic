@@ -17,7 +17,7 @@ Ambos são provenientes de erros do kernel de sistemas
 operacionais e são lançados quando o S.O. está sofrendo.
 O processo é tão traumático que os programadores buscam 
 ao máximo evitar esta situação, o que leva a implementação
-de técnicas extremamente sofisticadas.
+de técnicas extremamente sofisticadas para evitar isso.
 
 Uma versão humana do Kernel panic é o [burnout](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/sindrome-de-burnout#:~:text=S%C3%ADndrome%20de%20Burnout%20ou%20S%C3%ADndrome,justamente%20o%20excesso%20de%20trabalho.)
 ,que força o desligamento e reinicialização em modo de "segurança" do seu corpo, e pode vir acompanhado
@@ -27,7 +27,9 @@ Este problema típico da sociedade do desempenho, descrito por
 Byung-Chul Han em seu livro "Sociedade do cansaço", ainda não
 possui solução definitiva. Entretanto, o repositório atual
 busca ajudar você jovem estudante da FGA a selecionar 
-a ordem de resolução das atividades mais importantes.
+a ordem de resolução das atividades mais importantes, para
+o caso de você ter que escolher "tomar o dano" de não fazer
+uma atividade em troca da sua saúde mental.
 
 O princípio geral do repositório pode ser descrito da seguinte forma:
 
