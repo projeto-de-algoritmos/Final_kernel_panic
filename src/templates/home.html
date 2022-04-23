@@ -25,6 +25,8 @@
 </head>
 
 <body>
+  <div>
+  </div>
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -118,24 +120,33 @@
             <h5>
               Adicione Uma Atividade
             </h5>
-            <form action="">
+            <form action="{{ url_for('insere_atividade') }}" method="post">
               <div>
-                <input type="text" placeholder="Nome da Atividade" />
+                <input id="nome_atividade" name="nome_atividade" type="text" placeholder="Nome da Atividade" />
               </div>
               <div>
-                <input placeholder="Data de Entrega" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+                <input name="data_fim" id="data_fim" placeholder="Data de Entrega" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
               </div>
               <div>
-                <input type="email" placeholder="Peso na Nota Final" />
+                <input name="peso_atividade" id="peso_atividade" placeholder="Peso na Nota Final" />
               </div>
               <div>
-                <input type="text" placeholder="Matéria"/>
+                <select name="materia" id="materia" >
+                {% for el in titulo_id_materias %}
+                  <option value="{{ el[1] }}">{{ el[0] }}</option> 
+                {% endfor%}
+                </select>
               </div>
               <div class="d-flex justify-content-center">
                 <button type="submit" class="btn_on-hover">
                   Enviar
                 </button>
               </div>
+            </form>
+            <form action="{{ url_for('remove_todas_atividades') }}" method="post">
+              <button type="submit" class="btn_on-hover">
+                Remover Todas Atividades
+              </button>
             </form>
           </div>
         </div>
