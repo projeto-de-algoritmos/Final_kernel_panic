@@ -67,18 +67,6 @@ body {
   background-size: cover;
 }
 
-.sub_page .hero_area {
-  height: auto;
-}
-
-.sub_page .contact_section {
-  margin: 75px 0;
-}
-
-.hero_area.sub_pages {
-  height: auto;
-}
-
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
@@ -380,7 +368,8 @@ a:focus {
   text-align: center;
 }
 
-.contact_section .contact-form input {
+.contact_section .contact-form input,
+.contact_section .contact-form select {
   border: none;
   outline: none;
   background-color: #ffffff;
@@ -395,7 +384,8 @@ a:focus {
   border-radius: 10px;
 }
 
-.contact_section .contact-form input::-webkit-input-placeholder {
+.contact_section .contact-form input::-webkit-input-placeholder,
+.contact_section .contact-form select::-webkit-input-placeholder {
   color: #151515;
 }
 
@@ -422,15 +412,6 @@ a:focus {
   border-radius: 30px;
 }
 
-.contact_section .map_img-box {
-  width: 80%;
-  margin: 25px auto 0 auto;
-}
-
-.contact_section .map_img-box img {
-  width: 100%;
-}
-
 /* end contact section */
 
 
@@ -447,7 +428,7 @@ a:focus {
 }
 
 .footer_section p {
-  padding: 20px 65px;
+  padding: 65px 65px;
   color: #787878;
   margin: 50 auto;
   text-align: center;

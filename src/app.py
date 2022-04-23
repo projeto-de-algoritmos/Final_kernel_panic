@@ -13,6 +13,7 @@ def index():
 @app.route("/agenda")
 def agenda():
     return render_template('to_do_list.html')
+    
 @app.route("/insere_atividade", methods=['POST'])
 def insere_atividade():
     pass
