@@ -10,6 +10,10 @@ def index():
     titulo_id_materias = [(m.title,m.id_) for m in load_materias()]
     return render_template('home.html',titulo_id_materias=titulo_id_materias)
 
+@app.route("/agenda")
+def agenda():
+    return render_template('to_do_list.html')
+    
 @app.route("/insere_atividade", methods=['POST'])
 def insere_atividade():
     pass
