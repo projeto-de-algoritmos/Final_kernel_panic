@@ -13,7 +13,8 @@ def index():
 
 @app.route("/agenda")
 def agenda():
-    return render_template('to_do_list.html',atividades=load_atividades())
+    atividades = load_atividades()
+    return render_template('to_do_list.html',atividades=atividades)
     
 @app.route("/insere_atividade", methods=['POST'])
 def insere_atividade():

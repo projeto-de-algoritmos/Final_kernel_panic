@@ -22,6 +22,12 @@
   <link href="../static/styles/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="../static/styles/responsive.css" rel="stylesheet" />
+  <script>
+    function render(el){
+      el.innerHTML = Intl.DateTimeFormat('pt', { month: 'long' }).format(new Date('01'));
+    };
+    }
+  </script>
 </head>
 
 <body>
@@ -72,34 +78,38 @@
       <div class="event_container">
         
         <!-- loop box -->
-        
-        <div class="box">
-          <div class="activity-box">
-            <h4>
-                Projeto Final
-            </h4>
-            <h6>
-                Projeto de Algoritmos
-            </h6>
-          </div>
-          <div class="detail-box">
-            <h4>
-                <b>Peso: </b>20<b>%</b>
-            </h4>
-            <h6>
-                <b>Tranca: </b>Cálculo, APC, etc.
-            </h6>
-          </div>
-          <div class="date-box">
-            <h3>
-              <span>
-                15
-              </span>
-              Março
-            </h3>
-          </div>
-        </div>
+        {% for at in atividades%}
+          <div class="box">
+            <div class="activity-box">
+              <h4>
+                {{ at['nome_atividade'] }}
+              </h4>
+              <h6>
+                {{ at['materia'] }}
+              </h6>
+            </div>
+            <div class="detail-box">
+              <h4>
+                  <b>Peso: </b>
+                  {{ at['peso_atividade'] }}
+                  <b>%</b>
+              </h4>
+              <!--
+              <h6>
 
+                  <b>Tranca: </b>Cálculo, APC, etc.
+              </h6>
+                -->
+            </div>
+            <div class="date-box">
+              <h3>
+                <span>
+                {{ at['data_fim'] }}
+                </span>
+              </h3>
+            </div>
+          </div>
+        {% endfor %}
         <!-- end box loop -->
 
       </div>
