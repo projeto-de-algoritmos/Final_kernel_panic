@@ -26,7 +26,6 @@
     function render(el){
       el.innerHTML = Intl.DateTimeFormat('pt', { month: 'long' }).format(new Date('01'));
     };
-    }
   </script>
 </head>
 
@@ -68,12 +67,19 @@
   <section class="event_section layout_padding">
     <div class="container">
       <div class="heading_container">
-        <h3>
-          Atividades
-        </h3>
-        <p>
-          Suas atividades em ordem de prioridade!
-        </p>
+        <div>
+            <h3>
+              Atividades
+            </h3>
+            <p>
+              Suas atividades em ordem de prioridade!
+            </p>
+        </div>
+        <form class="remove_activities" action="{{ url_for('remove_todas_atividades') }}" method="post">
+            <button type="submit" style="background-color: #787878;">
+              Remover Todas Atividades
+            </button>
+        </form>
       </div>
       <div class="event_container">
         
