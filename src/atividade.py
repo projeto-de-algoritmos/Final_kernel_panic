@@ -1,23 +1,18 @@
 import csv
 
-class Atividade:
-    def __init__(self,nome,data_fim,peso_aparente,peso_total=0,materia_referente):
-        self.materia_referente = materia_referente
-        self.peso_total = peso_total
-        self.peso_aparente = peso_aparente
-        self.data_fim = data_fim
-        self.nome = nome
-
-path = "banco.csv"
 header = [
-    "nome",
-    "peso",
-    "data",
+    "nome_atividade",
+    "data_fim", 
+    "peso_atividade",
     "materia"
 ]
 def load_atividades():
-    with open("banco.csv") as f:
-        pass
+    reader = None
+    with open("banco.csv",'r') as f:
+        reader = csv.DictReader(f)
+    print(reader)
+    return reader
+
 
 def delete_atividades():
     with open("banco.csv",'w') as f:
@@ -25,6 +20,7 @@ def delete_atividades():
         writer.writerow(header)
 
 def insere_atividade_csv(atividade):
+    atividade = [atividade]
     with open("banco.csv",'a') as f:
-        pass
-    pass
+        writer = csv.DictWriter(f,fieldnames=header)
+        writer.writerows(atividade)
