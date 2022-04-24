@@ -7,11 +7,19 @@ header = [
     "materia"
 ]
 def load_atividades():
-    reader = None
+    atividades = []
     with open("banco.csv",'r') as f:
-        reader = csv.DictReader(f)
-    print(reader)
-    return reader
+        # pula o header do csv
+        next(f)
+        for l in f.readlines():
+            dc = {}
+            l = l.split(",")
+            dc["nome_atividade"] = l[0]
+            dc["data_fim"] = l[1]
+            dc["peso_atividade"] = l[2]
+            dc["materia"] = l[3][:-1]
+            atividades.append(dc)
+    return atividades
 
 
 def delete_atividades():
