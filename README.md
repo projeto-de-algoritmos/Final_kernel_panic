@@ -3,6 +3,8 @@
 **Número da Lista**: StackTraceError<br>
 **Conteúdo da Disciplina**: Final<br>
 
+**Vídeo:** [Link](https://drive.google.com/file/d/1jA73Yw8jpRhifvJbFr8o0RsoMNc9wkRI/view?usp=sharing)
+
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
@@ -40,7 +42,9 @@ O princípio geral do repositório pode ser descrito da seguinte forma:
 - O sistema retorna a lista com a prioridade de atividades a serem feitas.
 
 ## Screenshots
-![loading](img/loading.jpeg)
+![home](img/home.png)
+![form](img/form.png)
+![agenda](img/agenda.png)
 
 ## Instalação 
 **Linguagem**: Python3<br>
