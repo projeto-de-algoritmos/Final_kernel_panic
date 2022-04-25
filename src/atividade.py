@@ -1,5 +1,7 @@
 import csv
 
+from materia import load_materias
+
 header = [
     "nome_atividade",
     "data_fim", 
@@ -32,3 +34,17 @@ def insere_atividade_csv(atividade):
     with open("banco.csv",'a') as f:
         writer = csv.DictWriter(f,fieldnames=header)
         writer.writerows(atividade)
+
+def weight_dfs(peso_atividade, materia):
+    data = load_materias()
+    id_materias = []
+    peso = 0
+    for m in data:
+        if m.id_ == materia:
+            id_materias.append(m.id_)
+            peso += m.credits
+        for p in m.prerequisites:
+            if p in id_materias:
+                id_materias.append(m.id_)
+                peso += m.credits
+    return (peso * peso_atividade / 100, id_materias)

@@ -307,7 +307,10 @@ a:focus {
   font-size: 1.2em;
   font-weight: bold;
 }
-
+.event_section .heading_container .list_buttons {
+  display: flex;
+  flex-direction: row;
+}
 .event_section .btn-box {
   display: -webkit-box;
   display: -ms-flexbox;

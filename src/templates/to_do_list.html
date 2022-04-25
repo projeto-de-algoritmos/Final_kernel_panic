@@ -75,11 +75,18 @@
               Suas atividades em ordem de prioridade!
             </p>
         </div>
-        <form class="remove_activities" action="{{ url_for('remove_todas_atividades') }}" method="post">
+        <div class="list_buttons">
+          <form class="remove_activities" action="{{ url_for('ordena_atividades') }}" method="post">
+            <button type="submit" style="background-color: #4bc5b8;">
+              Ordenar Atividades
+            </button>
+          </form>
+          <form class="remove_activities" action="{{ url_for('remove_todas_atividades') }}" method="post">
             <button type="submit" style="background-color: #787878;">
               Remover Todas Atividades
             </button>
-        </form>
+          </form>
+        </div>
       </div>
       <div class="event_container">
         
@@ -100,12 +107,12 @@
                   {{ at['peso_atividade'] }}
                   <b>%</b>
               </h4>
-              <!--
               <h6>
-
-                  <b>Tranca: </b>Cálculo, APC, etc.
+                  <b>Tranca: </b>
+                  {%for t in at['trancadas']%}
+                  {{ t }}
+                  {%endfor%}
               </h6>
-                -->
             </div>
             <div class="date-box">
               <h3>
